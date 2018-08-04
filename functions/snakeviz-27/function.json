@@ -1,0 +1,4 @@
+{
+  "runtime": "python2.7",
+  "handler": "main.handler"
+}

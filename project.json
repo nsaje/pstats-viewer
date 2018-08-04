@@ -1,0 +1,8 @@
+{
+  "name": "snakeviz-online",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::010858385735:role/snakeviz-online_lambda_function",
+  "environment": {}
+}
