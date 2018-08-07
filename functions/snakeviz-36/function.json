@@ -1,5 +1,5 @@
 {
-  "runtime": "python2.7",
+  "runtime": "python3.6",
   "handler": "main.handler",
   "hooks": {
       "build": "pip install -r requirements.txt -t ."
