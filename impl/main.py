@@ -5,7 +5,7 @@ import marshal
 
 import tornado.template
 
-import stats as snakeviz_stats
+from . import stats as snakeviz_stats
 
 STATIC_URL = 'https://nejc.saje.info/pstats'
 
@@ -14,7 +14,7 @@ try:
 except ImportError:
     import urlparse
 
-with open('viz.html') as f:
+with open('impl/viz.html') as f:
     viz_template = tornado.template.Template(f.read())
 
 class MockProfile:
@@ -37,7 +37,7 @@ def handler(event, context):
             table_rows=snakeviz_stats.table_rows(stats),
             callees=snakeviz_stats.json_stats(stats),
             static_url=STATIC_URL
-        ),
+        ).decode(),
         "headers": {
             "Content-Type": "text/html"
         }

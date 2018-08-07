@@ -1,7 +1,7 @@
 {
   "runtime": "python2.7",
-  "handler": "main.handler",
+  "handler": "handler_proxy.handler",
   "hooks": {
-      "build": "pip install -r requirements.txt -t ."
+      "build": "pip install -r impl/requirements.txt -t ."
   }
 }
