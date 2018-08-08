@@ -28,7 +28,13 @@ def handler(event, context):
     qs = urlparse.parse_qs(event.get("body"))
     stats_bytes = base64.b64decode(qs.get("pstats")[0])
 
-    stats = pstats.Stats(MockProfile(stats_bytes))
+    try:
+        stats = pstats.Stats(MockProfile(stats_bytes))
+    except:
+        return {
+            "statusCode": 400,
+            "body": "Unable to load provided file, did you choose the correct Python version?"
+        }
 
     return {
         "statusCode": 200,
