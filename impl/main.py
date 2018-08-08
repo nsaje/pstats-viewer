@@ -7,7 +7,7 @@ import tornado.template
 
 from . import stats as snakeviz_stats
 
-STATIC_URL = 'https://nejc.saje.info/pstats'
+STATIC_URL = 'https://nejc.saje.info/snakeviz'
 
 try:
     import urllib.parse as urlparse
