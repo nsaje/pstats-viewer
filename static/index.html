@@ -66,6 +66,8 @@
 </style>
 
 <body>
+    <a href="https://github.com/nsaje/pstats-viewer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
     <div id="pre-submit-container">
         <h1>pstats viewer</h1>
         <p>An online viewer of profile files produced by Python's cProfile module.</p>
@@ -79,6 +81,8 @@
         <form id="pstats-form" method="POST" target="snakeviz-iframe">
             <input type="hidden" id="pstats-base64" name="pstats" />
         </form>
+
+        <p><small>Uses <a href="https://jiffyclub.github.io/snakeviz/">Snakeviz</a> and AWS Lambda under the hood.</small></p>
     </div>
 
     <iframe id="snakeviz-iframe" name="snakeviz-iframe" class="snakeviz-iframe">
